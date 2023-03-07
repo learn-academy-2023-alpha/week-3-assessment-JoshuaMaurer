@@ -64,25 +64,33 @@
         }
         // No need to change anything ABOVE this line ^
 
+
+        // Added react fragments on lines 72 and 90
+        // Added the drawCard function to the onClick on line 75
+        // Changed onclick to onClick with camelCase in the shuffle button on line 77
+
         return (
-          <h1>Draw a Card</h1>
-          <button onClick={}>
-            Click to Draw a Card
-          </button>
-          <button onclick={shuffle}>
-            Return Cards and Shuffle Deck
-          </button>
-          <div style={handStyles}>
-            {hand.map((card, index) => {
-              return (
-                <div style={cardStyles} key={index}>
-                  {card}
+            <> 
+                <h1>Draw a Card</h1>
+                
+                <button onClick={drawCard}>Click to Draw a Card</button>
+                
+                <button onClick={shuffle}>Return Cards and Shuffle Deck</button>
+
+                <div style={handStyles}>
+                    {hand.map((card, index) => {
+                        return (
+                            <div style={cardStyles} key={index}>
+                                {card}
+                                
+                            </div>
+                        )
+                    })}
                 </div>
-              )
-            })}
-          </div>
+
+            </>
         )
-      }
+    }
 
       // No need to change anything below this line
 
